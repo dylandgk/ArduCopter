@@ -4,6 +4,10 @@
 SoftwareSerial bluetooth (10, 11);
 double mykp, myki, mykd;
 
+extern unsigned long lastTime, sampleTime;
+extern double input, output, setPoint, errorSum, ITerm, lastInput, kp, ki, kd, outMin, outMax;
+extern int controllerDirection, PIDMode;
+
 void setup() {
   // Set PID controls.
   setPIDMode (ENABLED);

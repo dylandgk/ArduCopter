@@ -1,4 +1,4 @@
-#include <arduino.h>
+#include "PID.h"
 
 unsigned long lastTime = 0;
 unsigned long sampleTime = 1000;      // 1 second.
@@ -7,11 +7,6 @@ double input, output, setPoint;
 double errorSum, ITerm, lastInput;
 double kp, ki, kd;
 
-#define ENABLED   1
-#define DISABLED  0
-
-#define DIRECT    0
-#define REVERSE   1
 int controllerDirection = DIRECT;
 
 int PIDMode = DISABLED;
